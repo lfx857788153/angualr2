@@ -1,0 +1,15 @@
+<h3>Top Heroes</h3>
+<div class="grid grid-pad">
+  <!--*ngFor=>ng-repeat  (click)=>ng-click -->
+  <div *ngFor="let hero of heroes" (click)="gotoDetail(hero)" class="col-1-4">
+    <div class="module hero">
+      <h4>{{hero.id}}</h4>
+      <h4>{{hero.name}}</h4>
+    </div>
+  </div>
+</div>
+<hero-search></hero-search>
+
+<!--组件的嵌套：1.只需要在父组件中使用子组件的selector属性值即可，注意：需要在根模块(AppModule)中导入子组件-->
+
+

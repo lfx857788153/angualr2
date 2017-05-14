@@ -1,0 +1,39 @@
+{
+  "name": "angular2-heros",
+  "version": "1.0.0",
+  "description": "angular2 module router",
+  "scripts": {
+    "start": "concurrently \"npm run tsc:w\" \"npm run lite\" ",
+    "tsc:w": "tsc -w",
+    "lite": "lite-server"
+  },
+  "keywords": [
+    "angular2"
+  ],
+  "author": "dsh",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/common": "^2.4.7",
+    "@angular/compiler": "^2.4.7",
+    "@angular/compiler-cli": "^2.4.7",
+    "@angular/core": "^2.4.7",
+    "@angular/forms": "^2.4.7",
+    "@angular/http": "^2.4.7",
+    "@angular/platform-browser": "^2.4.7",
+    "@angular/platform-browser-dynamic": "^2.4.7",
+    "@angular/platform-server": "^2.4.7",
+    "@angular/router": "^3.4.7",
+    "@angular/upgrade": "^2.4.7",
+    "angular-in-memory-web-api": "^0.2.4",
+    "core-js": "^2.4.1",
+    "rxjs": "^5.1.1",
+    "systemjs": "^0.20.7",
+    "zone.js": "^0.7.7"
+  },
+  "devDependencies": {
+    "concurrently": "^3.3.0",
+    "lite-server": "^2.2.2",
+    "typescript": "^2.1.6"
+  },
+  "main": "system-config.js"
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="董书华" />
+    <title>箭头函数和this指向</title>
+    <style>p { font-size: 24px; }</style>
+    <!--<script src="es5-before.js"></script>-->
+    <script src="es5.js"></script>
+</head>
+
+<body>
+    <p>代码释义：</p>
+    <p>
+        1. es5-before.js中由于使用回调函数，setTimeout内部的this指向window对象，而window对象中没有定义age变量，所以this.age返回值是undefined，则undefined + 1 = NaN
+    </p>
+    <p>
+        2. es5.js中由于使用箭头函数，setTimeout内部的this指向当前声明的对象（即new MyComponent()）的类型MyComponent，而对象中MyComponent中存在this.age = 32，则返回值是33
+    </p>
+    <p>3. 总结：箭头函数，不仅提供了优美的语法，更重要的是它的执行上下文（也就是this）指向了外层的代码，而TypeScript包含ES5，所以在TypeScript中特别注意this上下文的使用, Angular2中建议使用箭头函数来避免函数作用域</p>
+</body>
+
+</html>
